@@ -10,11 +10,11 @@ import java.util.List;
 public class FileSample {
 
 	public static void main(String[] args) throws IOException {
-		try (FileOutputStream fileOutputStream = new FileOutputStream(new File("file"));
-				OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, "UTF-8");
-				PrintWriter out = new PrintWriter(new BufferedWriter(outputStreamWriter));) {
+		try (FileOutputStream fileOutputStream     = new FileOutputStream(new File("file"));
+		     OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, "UTF-8");
+             PrintWriter out                       = new PrintWriter(new BufferedWriter(outputStreamWriter));) {
 
-			List<String> list = new ArrayList<>();
+            List<String> list = new ArrayList<>();
 			list.add("a");
 			list.add("b");
 			list.add("c");

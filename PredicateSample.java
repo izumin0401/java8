@@ -7,13 +7,18 @@ public class PredicateSample {
 		String str = "a";
 
 		Predicate<String> isNull = Predicate.isEqual(null);
+
 		//Predicate<String> judge = s -> "a".equals(s);
 		Predicate<String> judge = "a"::equals;
-		Predicate<String> judge2 = s -> {if(str.equals("a")) {
-											return true;
-										} else {
-											return false;
-										}};
+
+		Predicate<String> judge2 =
+		    s -> {
+			    if(str.equals("a")) {
+					return true;
+				} else {
+					return false;
+				}
+			};
 
 		if(isNull.test(str)) {
 			System.out.println(str);
